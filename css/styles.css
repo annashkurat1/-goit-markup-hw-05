@@ -204,7 +204,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   transition: 260ms ease-in-out;
 }
