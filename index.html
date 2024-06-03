@@ -507,14 +507,21 @@
           </ul>
         </div>
         <div class="container">
-          <label class="last-mail">
-            Subscribe
-            <input type="email" placeholder="E-mail" class="last-mail-input" />
-          </label>
+          <p class="last-mail-p">Subscribe</p>
+          <form class="last-form">
+            <label class="last-mail">
+              <input
+                type="email"
+                placeholder="E-mail"
+                class="last-mail-input"
+                name="email"
+              />
+            </label>
+          </form>
         </div>
-        <button type="button" class="last-button">
+        <button type="submit" class="last-button">
           Subscribe
-          <svg class="last-icon" width="24" height="20">
+          <svg class="last-icon" width="24" height="24">
             <use href="./images/icons.svg#icon-send"></use>
           </svg>
         </button>
