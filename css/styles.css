@@ -617,7 +617,8 @@ a.last-websudio.extra-class {
   justify-content: center;
   align-items: center;
   position: absolute;
-
+  top: 50%;
+  left: 50%;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
 }
@@ -635,6 +636,8 @@ a.last-websudio.extra-class {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 24px;
+  height: 24px;
 }
 .modal-icon-b:hover {
   background-color: #404bbf;
@@ -679,12 +682,12 @@ a.last-websudio.extra-class {
 .form-label {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
   letter-spacing: 0.04em;
   color: #8e8f99;
   width: 100%;
   display: block;
   margin-bottom: 4px;
+  line-height: 1.17;
 }
 .form-label:focus-within {
   color: #4d5ae5;
