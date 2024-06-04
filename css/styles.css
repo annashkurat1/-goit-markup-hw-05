@@ -594,7 +594,7 @@ a.last-websudio.extra-class {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   transition: 260ms ease-in-out;
   background-color: rgba(46, 47, 66, 0.4);
@@ -617,8 +617,7 @@ a.last-websudio.extra-class {
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
+
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
 }
