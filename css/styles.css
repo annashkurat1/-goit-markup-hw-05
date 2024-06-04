@@ -564,6 +564,7 @@ a.last-websudio.extra-class {
   height: 40px;
   background: #4d5ae5;
   font-weight: 500;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -596,6 +597,9 @@ a.last-websudio.extra-class {
   opacity: 0;
   pointer-events: none;
   transition: 260ms ease-in-out;
+  background-color: rgba(46, 47, 66, 0.4);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-overlay.is-open {
   opacity: 1;
@@ -604,52 +608,75 @@ a.last-websudio.extra-class {
 .modal {
   border-radius: 4px;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
-  padding: 24px;
-
   overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px 24px;
 }
-.modal-icon {
+.modal-icon-b {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border-radius: 50%;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-icon-b:hover {
+  background-color: #404bbf;
+  border: none;
+}
+.modal-icon-b:focus {
+  background-color: #404bbf;
+  border: none;
 }
 
 .modal-icon .icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #e7e9fc;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  position: fixed;
-  margin-left: 720px;
-  margin-bottom: 500px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-div {
-  display: flex;
+.modal-icon .icon:hover {
+  fill: #ffffff;
 }
-.form-div .form-icon {
-  position: absolute;
-  pointer-events: none;
-  left: 440px;
+.modal-icon .icon:focus {
+  fill: #ffffff;
 }
-.form-legend {
+.modal-p {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  margin-bottom: 16px;
 }
+.form-div {
+  display: flex;
+  margin-bottom: 8px;
+}
+.form-icon {
+  position: absolute;
+  pointer-events: none;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .form-label {
   font-weight: 400;
   font-size: 12px;
@@ -657,6 +684,8 @@ a.last-websudio.extra-class {
   letter-spacing: 0.04em;
   color: #8e8f99;
   width: 100%;
+  display: block;
+  margin-bottom: 4px;
 }
 .form-label:focus-within {
   color: #4d5ae5;
@@ -665,6 +694,9 @@ a.last-websudio.extra-class {
   color: #4d5ae5;
   border: 1px solid #4d5ae5;
 }
+.form-label-div {
+  margin-bottom: 16px;
+}
 .form-fieldset {
   display: flex;
   flex-direction: column;
@@ -672,18 +704,47 @@ a.last-websudio.extra-class {
 .form-input {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
+
   height: 40px;
+  width: 100%;
+  background-color: transparent;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:focus {
+  border-color: #4d5ae5;
+  fill: #4d5ae5;
+}
+.form-input-svg-in {
+  position: relative;
 }
 .form-text {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
   height: 120px;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-text:focus {
+  border-color: #4d5ae5;
 }
 .form-chek {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+}
+.form-chek:checked span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
 }
 .form-label-chek {
   flex-direction: row;
@@ -693,6 +754,22 @@ a.last-websudio.extra-class {
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
+.form-label-chek-span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+.form-chekbox {
+  margin-bottom: 24px;
+}
 .form-button {
   display: block;
   align-items: flex-start;
@@ -701,7 +778,7 @@ a.last-websudio.extra-class {
   gap: 10px;
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
@@ -709,4 +786,11 @@ a.last-websudio.extra-class {
   cursor: pointer;
   margin: 0 auto;
   margin-top: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
