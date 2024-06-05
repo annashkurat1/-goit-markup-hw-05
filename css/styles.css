@@ -723,6 +723,9 @@ a.last-websudio.extra-class {
   border-color: #4d5ae5;
   fill: #4d5ae5;
 }
+.form-input:focus .form-icon {
+  fill: #4d5ae5;
+}
 .form-input-svg-in {
   position: relative;
 }
