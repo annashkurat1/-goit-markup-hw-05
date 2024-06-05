@@ -755,7 +755,7 @@ a.last-websudio.extra-class {
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
 }
-.form-chek:checked + .user-privacy .form-label-chek-span {
+.form-chek:checked .user-privacy .form-label-chek-span {
   background-color: #404bbf;
   border: none;
   fill: #f4f4fd;
