@@ -764,9 +764,10 @@ a.last-websudio.extra-class {
   flex-direction: row;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+
   letter-spacing: 0.04em;
   color: #8e8f99;
+  line-height: 1.17;
 }
 .form-label-chek-span {
   width: 16px;
@@ -780,6 +781,9 @@ a.last-websudio.extra-class {
   align-items: center;
   justify-content: center;
   fill: transparent;
+}
+.form-label-chek-a {
+  color: #4d5ae5;
 }
 .form-chekbox {
   margin-bottom: 24px;
